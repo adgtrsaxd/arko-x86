@@ -1,0 +1,7 @@
+*.o
+*.lst
+/leavelastndig/leavelastndig/
+/remdigits/remdigits
+/remnth/remnth
+/removerng/removerng
+/remrep/remrep
