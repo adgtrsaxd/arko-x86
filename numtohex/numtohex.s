@@ -12,7 +12,6 @@ numtohex:
 
         mov     ebx, [ebp + 8]
         mov     edi, buf
-        dec     edi
 
         mov     edx, 'a'
         sub     edx, '9'
@@ -30,14 +29,13 @@ gethex:
         add     eax, edx
 putinbuf:
         add     eax, '0'
-        stosb
+        dec     edi
+        mov     [edi], al
 
         test    ebx, ebx
         jnz     gethex
 
 fin:
-        cld
-        inc     edi
         mov     eax, edi  ; set result
         pop     edi     ; restore edi
         pop     esi     ; restore esi
